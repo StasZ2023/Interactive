@@ -1,0 +1,33 @@
+$shadow: -1px -1px 0 black,
+1px -1px 0 black,
+-1px  1px 0 black,
+1px  1px 0 black;
+.years {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    z-index: 200;
+  }
+  
+  .yearStart {
+    color: #3877EE;
+    font-weight: 700;
+    font-size: 120px;
+    text-shadow: $shadow
+  }
+  
+  .yearEnd {
+    color: #EF5DA8;
+    font-weight: 700;
+    font-size: 120px;
+    text-shadow: $shadow
+  }
+  @media (max-width: 767px) {
+    .yearStart ,.yearEnd{
+      font-size: 56px;
+    }
+  }

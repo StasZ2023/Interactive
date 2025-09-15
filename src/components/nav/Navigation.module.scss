@@ -1,0 +1,51 @@
+.navigation {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .navBtn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    border:1px solid black;
+    color: #333;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    &:hover {
+      background: #e0e0e0;
+
+      .arrow {
+        border-color: black;
+      }
+    }
+    .arrow {
+      width: 8px;
+      height: 8px;
+      border: 2px solid rgba(0, 0, 0, 0.5);
+      border-top: none;
+      border-left: none;
+      transform: rotate(-45deg);
+      transition: border-color 0.3s ease;
+    }
+    .arrowStart {
+      transform: rotate(130deg);
+    }
+  }
+  
+  .status {
+    text-align: left;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+ 

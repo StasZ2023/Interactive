@@ -1,0 +1,134 @@
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: 'Arial', sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  position: relative;
+}
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  position: absolute;
+  background: black;
+}
+
+.wrapper::before {
+  top: 40%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
+  opacity: 0.2;
+}
+
+.wrapper::after {
+  left: 50%;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateX(-50%);
+  opacity: 0.2;
+}
+
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+.timelineCircle {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border: 1px dashed #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+}
+
+.dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 12px;
+  color: #666;
+  z-index: 1;
+
+  &:hover {
+    background: #e0e0e0;
+  }
+
+  &.active {
+    background: #007bff;
+    color: white;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.2);
+  }
+}
+
+.dotLabel {
+  position: absolute;
+  top: -30px;
+  right: 50px;
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+}
+.status {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+.swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+
+.swiper-pagination {
+  display: none !important;
+  justify-content: center;
+  margin-top: 10px;
+}
+@media (max-width: 767px) {
+  .wrapper{
+    padding:0px;
+  }
+    .prevBtn,
+    .nextBtn {
+      display: none !important;
+    }
+  
+    .swiper-pagination {
+      display: flex !important;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    .wrapper::before, .wrapper::after  {
+      display: none;
+    }
+
+  }

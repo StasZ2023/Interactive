@@ -1,0 +1,25 @@
+.header {
+    width:40%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 36px;
+    padding-left: 20px;
+  }
+  .header::before {
+    content: '';
+    width: 4px;
+    height: 100px;
+    background: linear-gradient(to bottom, #4a5568, #e53e3e);
+    position: absolute;
+    left: -40px;
+    
+  }
+  @media (max-width: 767px) {
+    .header{
+      font-size: 20px;
+    }
+    .header::before{
+      display: none;
+    }
+  }
