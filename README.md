@@ -8,8 +8,8 @@
 Клонируем репозиторий:
 
 ```bash
-git clone https://github.com/USERNAME/interactive-timeline.git
-cd interactive-timeline
+git clone https://github.com/StasZ2023/Interactive.git
+cd interactive
 
 npm install
 # или
